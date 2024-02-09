@@ -153,11 +153,12 @@ import {
 } from "@solana/web3.js";
 import "dotenv/config"
 import { getKeypairFromEnvironment } from "@solana-developers/helpers";
+```
 
 ### 3. Ping Program
 Now create an async function called `pingProgram()` with two parameters requiring a connection and payer’s keypair as arguments:
 
-```tsx
+```typescript
 async function pingProgram(connection: web3.Connection, payer: web3.Keypair) { }
 ```
 
@@ -179,7 +180,7 @@ const PING_PROGRAM_DATA_ADDRESS =  new web3.PublicKey('Ah9K7dQ8EHaZqcAsgBW8w37yN
 
 Now, in the `pingProgram()` function, let’s create a new transaction, then initialize a `PublicKey` for the program account, and another for the data account.
 
-```tsx
+```typescript
 async function pingProgram(
   connection: web3.Connection,
   payer: web3.Keypair
@@ -236,6 +237,7 @@ const signature = await web3.sendAndConfirmTransaction(
 )
 
 const transaction = new Transaction();
+```
 
 ### 4. Run the program
 Now call the `pingProgram()` 
